@@ -8,7 +8,7 @@
 
 // I AM NOT DONE
 
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+fn longest<'a>(x: & str, y: & str) -> String {
     if x.len() > y.len() {
         x
     } else {

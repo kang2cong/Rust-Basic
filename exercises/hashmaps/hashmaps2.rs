@@ -37,9 +37,22 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
     ];
 
     for fruit in fruit_kinds {
+        if !basket.contains_key(&fruit){
+            basket.insert(fruit,1);
+        }
         // TODO: Insert new fruits if they are not already present in the
         // basket. Note that you are not allowed to put any type of fruit that's
         // already present!
+    }
+    //确保数量
+    let total_fruits = basket.value().sum::<u32>();
+    if total_fruits<=11{
+        //总数不足的话已经存在水果的数量
+        for fruit in basket.key(){
+            if basket[fruit]<2{
+                basket.insert(*fruit,2);
+            }
+        }
     }
 }
 
