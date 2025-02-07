@@ -70,7 +70,7 @@ fn main() {
     uranus.details();
 
     // TODO
-    let neptune = Planet::Neptune(Rc::clone(&sun)); 
+    let neptune = Planet::Neptune(Rc::clone(&sun));
     println!("reference count = {}", Rc::strong_count(&sun)); // 9 references
     neptune.details();
 
@@ -95,11 +95,9 @@ fn main() {
     drop(earth);
     println!("reference count = {}", Rc::strong_count(&sun)); // 3 references
 
-    // TODO
     drop(venus);
     println!("reference count = {}", Rc::strong_count(&sun)); // 2 references
 
-    // TODO
     drop(mercury);
     println!("reference count = {}", Rc::strong_count(&sun)); // 1 reference
 

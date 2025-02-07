@@ -7,7 +7,7 @@
 
 // I AM NOT DONE
 
-struct Book <'a>{
+struct Book <'a> {
     author: &'a str,
     title: &'a str,
 }
